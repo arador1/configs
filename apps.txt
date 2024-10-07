@@ -7,3 +7,5 @@ thefuck --pacman
 tgpt -- pacman
 tldr -- pacman
 weechat -- pacman
+libnotify -- pacman
+xdg-desktop-portal-wlr -- pacman
