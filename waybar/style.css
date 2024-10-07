@@ -18,7 +18,7 @@
 
 #workspaces button {
   color: @color8;
-  padding-right: 1.2rem;
+  padding-right: 1.1rem;
 }
 
 #workspaces button.active {
@@ -36,11 +36,14 @@
 #pulseaudio,
 #network,
 #power-profiles-daemon,
-#window {
+{
   padding-right: 1rem;
   padding-left: 0.5rem;
 
   color: @color8;
+}
+#window{
+  padding-left: 0rem;
 }
 
 #clock {
