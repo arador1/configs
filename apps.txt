@@ -1,0 +1,9 @@
+dictd -- pacman
+wikit -- npm
+geekbench -- yay
+zoxide -- pacman
+bat -- pacman
+thefuck --pacman
+tgpt -- pacman
+tldr -- pacman
+weechat -- pacman

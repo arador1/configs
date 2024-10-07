@@ -1,0 +1,17 @@
+
+import = [
+  "/home/arador/.config/alacritty/colors/nord.toml"
+  # "/home/arador/.config/alacritty/colors/catppuccin-frappe.toml"
+]
+
+
+[font]
+
+normal = { family = "JetBrainsMono Nerd Font" , style = "Medium" }
+
+size = 13
+
+[window]
+
+padding = { x = 5, y = 5 }
+
