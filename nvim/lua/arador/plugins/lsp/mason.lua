@@ -25,7 +25,18 @@ return {
 
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
-			ensure_installed = {},
+			ensure_installed = {
+				"bashls",
+				"asm_lsp",
+				"clangd",
+				"cssls",
+				"html",
+				"jdtls",
+				"ts_ls",
+				"jsonls",
+				"lua_ls",
+				"pyright",
+			},
 		})
 
 		mason_tool_installer.setup({
@@ -36,7 +47,7 @@ return {
 				"black", -- python formatter
 				"google-java-format",
 				"clang-format",
-				
+
 				"shfmt",
 			},
 		})

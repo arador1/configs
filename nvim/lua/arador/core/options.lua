@@ -62,8 +62,41 @@ vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
 	end,
 })
 
+-- code runner
+
+function _G.run_code()
+	local ft = vim.bo.filetype
+	local cmd = ""
+
+	-- Define the command for each file type
+	if ft == "python" then
+		cmd = "python3 " .. vim.fn.expand("%")
+	elseif ft == "java" then
+		cmd = "javac " .. vim.fn.expand("%") .. " && java " .. vim.fn.expand("%:r")
+	elseif ft == "c" then
+		cmd = "gcc " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r") .. " && ./" .. vim.fn.expand("%:r")
+	elseif ft == "cpp" then
+		cmd = "g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r") .. " && ./" .. vim.fn.expand("%:r")
+	elseif ft == "lua" then
+		cmd = "lua " .. vim.fn.expand("%")
+	elseif ft == "sh" then
+		cmd = "bash " .. vim.fn.expand("%")
+	else
+		print("Unsupported file type")
+		return
+	end
+
+	-- Open a terminal split and run the command
+	vim.cmd("split | terminal " .. cmd)
+	vim.cmd("startinsert")
+end
+
 -- Lua
 vim.g.mapleader = " " -- Sets the leader key to space
+
+--code runner
+
+vim.api.nvim_set_keymap("n", "<leader>cr", ":lua run_code()<CR>", { noremap = true, silent = true })
 
 -- Lua
 vim.api.nvim_set_keymap(
@@ -72,6 +105,13 @@ vim.api.nvim_set_keymap(
 	":split | terminal<CR>:resize 30<CR>:startinsert<CR>",
 	{ noremap = true, silent = true }
 )
+
+--autocomment off
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	command = "setlocal formatoptions-=o formatoptions-=r",
+})
 
 o.fillchars:append({
 	vert = " ",
