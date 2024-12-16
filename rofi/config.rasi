@@ -1,37 +1,11 @@
-@theme "/usr/share/rofi/themes/solarized.rasi"
-@import "~/.cache/wal/colors-rofi-dark"
+@theme "./style-1.rasi"
 
 
 configuration {
     font:				"JetBrainsMono Nerd Font 11";
-    show-icons:				true;
-    icon-theme:				"Papirus-Dark";
-    display-drun: "Apps"; 
-    drun-display-format:		"{name}";
-    scroll-method:			0;
-    disable-history:			false;
-    sidebar-mode:			false;
   
     
 }
 
-
-
-window {
-    
-    background-color: @background;
-    border:           1px;
-    border-color:     @foreground;
-    border-radius:    0px;     
-    padding:          5px;
-    width: 25%;
-    height: 30%;
-}
-listview {
-    lines:                          10;
-    columns:                        1;
-    padding:                        0px;
-    spacing:                        5px;
-}
 
 

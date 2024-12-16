@@ -1,5 +1,3 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
 local o = vim.opt
 
 -- line numbers
@@ -52,9 +50,9 @@ o.swapfile = false
 
 -- auto save for html files
 
--- Autosave when leaving insert mode or text is changed, only for HTML files
+-- Autosave when leaving insert mode or text is changed, only for all files
 vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
-	pattern = { "*.html", "*.css" }, -- Match only HTML files
+	pattern = { "*.html", "*.css" }, -- Match All the file types
 	callback = function()
 		if vim.bo.modifiable and not vim.bo.readonly then
 			vim.cmd("silent! update") -- Save the file
