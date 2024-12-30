@@ -29,7 +29,6 @@ return {
 				"bashls",
 				"clangd",
 				"jdtls",
-				"ts_ls",
 				"lua_ls",
 				"pyright",
 			},

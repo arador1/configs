@@ -6,7 +6,6 @@
   // Choose the order of the modules
   "modules-center": ["clock"],
   "modules-right": [
-    "power-profiles-daemon",
     "cpu",
     "pulseaudio",
     "backlight",
@@ -66,18 +65,6 @@
     // "format-full": "",
     "format-icons": ["", "", "", "", ""],
   },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": " P",
-      "balanced": ", B",
-      "power-saver": "  S",
-    },
-  },
-
   "network": {
     //"interface": "wlp2s0",
     "format": "{ifname}",
@@ -103,12 +90,6 @@
       "default": ["", " ", " "],
     },
     "on-click": "pavucontrol",
-  },
-
-  "custom/separator": {
-    "format": "|",
-    "interval": "once",
-    "tooltip": false,
   },
 
   "hyprland/window": {

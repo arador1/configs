@@ -9,8 +9,7 @@ return {
 	},
 	config = function()
 		require("mason-tool-installer").setup({
-			ensure_installed = {
-			},
+			ensure_installed = {},
 		})
 
 		local lspconfig = require("lspconfig")
@@ -38,10 +37,8 @@ return {
 				opts.desc = "See available code actions"
 				keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
 
-
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>lD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
-
 
 				opts.desc = "Show documentation for what is under cursor"
 				keymap.set("n", "K", vim.lsp.buf.hover, opts)

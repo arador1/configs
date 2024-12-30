@@ -15,11 +15,11 @@
     indicate_hidden = yes
     shrink = no
 		separator_height = 2
-    separator_color = "#11111b"
+    separator_color = "#81a1c1"
     padding = 15
     horizontal_padding = 15
-    frame_width = 1
-    corner_radius = 0
+    frame_width = 2
+    corner_radius = 6
     sort = yes
     idle_threshold = 120
 
@@ -56,23 +56,23 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#4C566A"
+    background = "#3b4252"
     foreground = "#CDD6F4"
     highlight = "#CDD6F4"
-    frame_color = "#181825"
+    frame_color = "#81a1c1"
     timeout = 3
 
 [urgency_normal]
-    background = "#4C566A"
+    background = "#3b4252"
     foreground = "#CDD6F4"
     highlight = "#CDD6F4"
-    frame_color = "#181825"
+    frame_color = "#81a1c1"
     timeout = 5
 
 [urgency_critical]
-    background = "#4C566A"
+    background = "#3b4252"
     foreground = "#CDD6F4"
-    frame_color = "#f38ba8"
+    frame_color = "#81a1c1"
     timeout = 1000
 
 [volume]

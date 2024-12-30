@@ -79,6 +79,8 @@ function _G.run_code()
 		cmd = "lua " .. vim.fn.expand("%")
 	elseif ft == "sh" then
 		cmd = "bash " .. vim.fn.expand("%")
+	elseif ft == "javascript" then
+		cmd = "node " .. vim.fn.expand("%")
 	else
 		print("Unsupported file type")
 		return

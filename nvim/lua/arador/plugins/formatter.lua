@@ -10,22 +10,15 @@ return {
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
-				
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
 				jsonc = { "prettier" },
-				
-				
-				
-				
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				java = { "google-java-format" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
-				
-				
 				bash = { "shfmt" },
 				
 			},
