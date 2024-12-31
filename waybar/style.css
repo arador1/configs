@@ -8,7 +8,7 @@
 window#waybar {
   background: #2e3440;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 #workspaces {
@@ -33,13 +33,15 @@ window#waybar {
 }
 
 #backlight {
-  font-size: 18px;
+  color: #d08770;
+  font-size: 16px;
   margin: 1px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
 }
 #battery {
-  font-size: 18px;
+  color: #8aadf4;
+  font-size: 16px;
   opacity: 1;
   margin: 0px 0px 0px 0px;
   padding-left: 5px;
@@ -47,25 +49,29 @@ window#waybar {
 }
 
 #clock {
-  font-size: 18px;
+  color: #81a1c1;
+  font-size: 16px;
   opacity: 1;
   margin: 0px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
 }
 #pulseaudio {
-  font-size: 18px;
+  color: #ea999c;
+  font-size: 16px;
   margin: 0px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
 }
 #cpu {
-  font-size: 18px;
+  color: #ea76cb;
+  font-size: 16px;
   padding-left: 10px;
   padding-right: 10px;
 }
 #network {
-  font-size: 18px;
+  color: #88c0d0;
+  font-size: 16px;
   padding-right: 10px;
   padding-left: 10px;
 }
