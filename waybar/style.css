@@ -1,58 +1,77 @@
 * {
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 15px;
+  font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
+  font-size: 15px;
+  color: #81a1c1;
 }
 
-#waybar {
-  color: #81a1c1;
-  background-color: #2e3440;
-  border-radius: 0px 0px 5px 5px;
+window#waybar {
+  background: #2e3440;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 #workspaces {
-  margin-left: 1rem;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
 }
 
 #workspaces button {
-  color: #81a1c1;
-  padding-right: 1.1rem;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #workspaces button.active {
-  color: #81a1c1;
+  transition: all 0.3s ease;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #workspaces button:hover {
-  color: #81a1c1;
+  background: none;
 }
 
-#custom-notification,
-#backlight,
-#cpu,
-#battery,
-#pulseaudio,
-#network,
-#power-profiles-daemon {
-  padding-right: 1rem;
-  padding-left: 0.5rem;
-
-  color: #81a1c1;
+#backlight {
+  font-size: 18px;
+  margin: 1px 0px 0px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-#window {
-  padding-left: 0rem;
+#battery {
+  font-size: 18px;
+  opacity: 1;
+  margin: 0px 0px 0px 0px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #clock {
-  padding-right: 0.5rem;
-  padding-left: 1rem;
-  color: #81a1c1;
+  font-size: 18px;
+  opacity: 1;
+  margin: 0px 0px 0px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#pulseaudio {
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#cpu {
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#network {
+  font-size: 18px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
+#window {
+}
 #tray {
-  padding-right: 0.5rem;
-}
-
-* {
-  all: unset;
+  padding-right: 5px;
 }
