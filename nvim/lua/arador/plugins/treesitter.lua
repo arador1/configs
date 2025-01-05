@@ -30,7 +30,6 @@ return {
 				"bash",
 				"lua",
 				"vim",
-				"dockerfile",
 				"c",
 				"cpp",
 				"java",

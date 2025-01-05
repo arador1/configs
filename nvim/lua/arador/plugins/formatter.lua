@@ -20,7 +20,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				bash = { "shfmt" },
-				
+				go = { "gofmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

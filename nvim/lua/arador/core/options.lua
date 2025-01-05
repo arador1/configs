@@ -81,6 +81,8 @@ function _G.run_code()
 		cmd = "bash " .. vim.fn.expand("%")
 	elseif ft == "javascript" then
 		cmd = "node " .. vim.fn.expand("%")
+	elseif ft == "go" then
+		cmd = "go run " .. vim.fn.expand("%")
 	else
 		print("Unsupported file type")
 		return

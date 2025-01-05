@@ -2,24 +2,23 @@
   "layer": "top",
   "position": "top",
   "mod": "dock",
-  "margin-left": 10,
-  "margin-right": 10,
-  "margin-top": 7,
+  "margin-left": 4,
+  "margin-right": 4,
+  "margin-top": 4,
   "margin-bottom": 0,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
-  "modules-left": ["hyprland/workspaces", "mpris"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
   "modules-right": [
     "cpu",
     "network",
     "pulseaudio",
     "backlight",
     "battery",
-    "clock",
     "tray",
   ],
 
@@ -38,7 +37,7 @@
     },
     "format": "{icon} {capacity}%",
     "format-full": "{icon} {capacity}%",
-    "format-charging": "󰂄{capacity}%",
+    "format-charging": "󰂄 {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
@@ -57,11 +56,12 @@
     "format-icons": {
       "default": "",
       "active": "",
+      "urgent": "",
     },
   },
 
   "clock": {
-    "format": "󰥔 {:%I:%M %p}",
+    "format": " {:%I:%M %p   %b-%d-%a}",
     "rotate": 0,
   },
   "pulseaudio": {

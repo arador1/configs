@@ -31,6 +31,8 @@ return {
 				"jdtls",
 				"lua_ls",
 				"pyright",
+				"gopls",
+				"ts_ls",
 			},
 		})
 

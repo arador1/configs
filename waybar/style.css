@@ -45,7 +45,7 @@ window#waybar {
   opacity: 1;
   margin: 0px 0px 0px 0px;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 #clock {
@@ -79,5 +79,5 @@ window#waybar {
 #window {
 }
 #tray {
-  padding-right: 5px;
+  padding-right: 15px;
 }
