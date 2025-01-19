@@ -14,7 +14,7 @@ o.autoindent = true
 
 -- line wrapping
 
-o.wrap = false
+o.wrap = true
 
 -- search settings
 
@@ -28,7 +28,7 @@ o.cursorline = true
 -- appearance
 
 o.termguicolors = true
-o.background = "dark"
+--o.background = "dark"
 o.signcolumn = "yes"
 
 -- backspace

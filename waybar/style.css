@@ -26,10 +26,16 @@ window#waybar {
   transition: all 0.3s ease;
   padding-left: 4px;
   padding-right: 4px;
+  background-color: #4c566a;
+  border-radius: 7px;
 }
 
 #workspaces button:hover {
   background: none;
+}
+#workspaces button.urgent {
+  background-color: #b53737;
+  border-radius: 7px;
 }
 
 #backlight {

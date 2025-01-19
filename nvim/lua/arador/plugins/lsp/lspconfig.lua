@@ -34,8 +34,6 @@ return {
 				opts.desc = "Show LSP type definitions"
 				keymap.set("n", "lt", "<cmd>vsplit | Telescope lsp_type_definitions<CR>", opts)
 
-				opts.desc = "See available code actions"
-				keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
 
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>lD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
