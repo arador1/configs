@@ -52,7 +52,7 @@ o.swapfile = false
 
 -- Autosave when leaving insert mode or text is changed, only for all files
 vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
-	pattern = { "*.html", "*.css" }, -- Match All the file types
+	pattern = { "*.html", "*.css", "*.js" }, -- Match All the file types
 	callback = function()
 		if vim.bo.modifiable and not vim.bo.readonly then
 			vim.cmd("silent! update") -- Save the file
@@ -81,16 +81,20 @@ function _G.run_code()
 		cmd = "bash " .. vim.fn.expand("%")
 	elseif ft == "javascript" then
 		cmd = "node " .. vim.fn.expand("%")
-	elseif ft == "go" then
-		cmd = "go run " .. vim.fn.expand("%")
 	else
 		print("Unsupported file type")
 		return
 	end
 
-	-- Open a terminal split and run the command
-	vim.cmd("split | terminal " .. cmd)
-	vim.cmd("startinsert")
+	-- Use ToggleTerm to execute the command
+	local Terminal = require("toggleterm.terminal").Terminal
+	local run_terminal = Terminal:new({
+		cmd = cmd,
+		direction = "float", -- You can change this to 'horizontal' or 'vertical' if preferred
+		close_on_exit = false,
+	})
+
+	run_terminal:toggle()
 end
 
 -- Lua
@@ -101,14 +105,10 @@ vim.g.mapleader = " " -- Sets the leader key to space
 vim.api.nvim_set_keymap("n", "<leader>cr", ":lua run_code()<CR>", { noremap = true, silent = true })
 
 -- Lua
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>tt",
-	":split | terminal<CR>:resize 30<CR>:startinsert<CR>",
-	{ noremap = true, silent = true }
-)
 
---autocomment off
+vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
+
+--autocomment of the following after commenting a line , turn  off
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
