@@ -1,4 +1,3 @@
--- Sonokai Theme
 return {
 	{
 		"catppuccin/nvim",
