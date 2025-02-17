@@ -19,7 +19,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec --no-startup-id feh --bg-scale ~/Downloads/gavrl-snowy-forest.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/super-mario.png
+exec --no-startup-id ~/.config/polybar/reload.sh
+exec --no-startup-id greenclip daemon
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -32,6 +35,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 2%-
 
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/power.sh
+bindsym $mod+Shift+p exec --no-startup-id ~/.config/polybar/reload.sh
+bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+e exec --no-startup-id rofi -modi emoji -show emoji
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -40,8 +49,12 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+
+focus_follows_mouse yes
+
+
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -56,10 +69,10 @@ bindsym $mod+a exec --no-startup-id rofi -show drun
 #bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
 #bindsym $mod+Shift+j move left
@@ -169,6 +182,12 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bar{
-status_command i3status
-}
+
+
+
+exec_always --no-startup-id xinput set-prop 12 "libinput Tapping Enabled" "1"
+exec_always --no-startup-id xinput set-prop 12 "libinput Natural Scrolling Enabled" "1"
+exec_always --no-startup-id xinput set-prop 12 "libinput Accel Speed" "0"
+exec_always --no-startup-id xinput set-prop 12 "libinput Scrolling Pixel Distance" "20"
+exec_always --no-startup-id xset r rate 350 30
+
