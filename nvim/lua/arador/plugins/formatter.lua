@@ -14,7 +14,6 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				bash = { "shfmt" },
-				rust = { "rustfmt" },
 			},
 			format_on_save = true,
 		})
