@@ -1,8 +1,11 @@
-**GTK Theme**
+
+## **GTK Theme**
  - *Arc-gtk-theme*
-**QT Theme**
+
+## **QT Theme**
  - *Arc-dark Kvantum*
-**Global Font**
+
+## **Global Font**
  - JetBrainsMono Nerd Font
 
 # Packages
