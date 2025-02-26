@@ -5,13 +5,15 @@
 }
 
 window#waybar {
-  background: transparent;
+  background: #2e3440;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
 }
 
 #workspaces {
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
 }
 
 #workspaces button {
@@ -25,7 +27,7 @@ window#waybar {
   padding-left: 4px;
   padding-right: 4px;
   background-color: #4c566a;
-  border-radius: 10px;
+  border-radius: 7px;
   color: #81a1c1;
 }
 
@@ -43,16 +45,14 @@ window#waybar {
   margin: 1px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 10px;
 }
 #battery {
   color: #8aadf4;
   font-size: 16px;
   opacity: 1;
   margin: 0px 0px 0px 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 15px;
 }
 
 #clock {
@@ -69,48 +69,23 @@ window#waybar {
   margin: 0px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 10px;
 }
 #cpu {
   color: #ea76cb;
   font-size: 16px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 10px;
 }
 #network {
   color: #88c0d0;
   font-size: 16px;
   padding-right: 10px;
   padding-left: 10px;
-  margin-right: 10px;
 }
 
 #window {
   color: #81a1c1;
-  padding: 0px 10px;
 }
 #tray {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 5px;
-}
-#clock,
-#cpu,
-#network,
-#pulseaudio,
-#backlight,
-#battery,
-#window,
-#tray,
-#workspaces
-{
-  background-color: #2e3440;
-  border-radius: 10px;
-  border-width: 2px;
-  border-color: #3b4252;
-  border-style: solid;
-}
-#workspaces{
-  margin-right: 10px;
+  padding-right: 15px;
 }
