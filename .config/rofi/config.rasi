@@ -1,0 +1,11 @@
+@theme "./style-1.rasi"
+
+
+configuration {
+    font:				"JetBrainsMono Nerd Font 14";
+  
+    
+}
+
+
+

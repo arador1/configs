@@ -1,0 +1,115 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "margin-left": 4,
+  "margin-right": 4,
+  "margin-top": 4,
+  "margin-bottom": 0,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "tray",
+  ],
+
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "tooltip": false,
+  },
+  "battery": {
+    "bat": "BAT1",
+    "interval": 1,
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""],
+  },
+
+  "tray": {
+    "icon-size": 22,
+    "rotate": 0,
+    "spacing": 3,
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {},
+  },
+
+  "clock": {
+    "format": " {:%I:%M %p   %b-%d-%a}",
+    "rotate": 0,
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
+    "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+    "format-muted": "󰝟 {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", ""],
+    },
+    "on-click": "pavucontrol",
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "rotate": 0,
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+  },
+  "network": {
+    //"interface": "wlp2s0",
+    "format": "{ifname}",
+    "format-wifi": "  {essid}({signalStrength}%)",
+    "format-ethernet": "  {ipaddr}/{cidr}",
+    "format-disconnected": " Disconnected", //An empty format will hide the module.
+    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 1,
+  },
+  "hyprland/window": {
+    "format": " {}",
+    "icon": true,
+    "separate-outputs": true,
+    "max-length": 60,
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "",
+      "mpv": "",
+    },
+    "status-icons": {
+      "paused": "",
+    },
+    "ignored-players": ["firefox"],
+    "max-length": 50,
+  },
+}
