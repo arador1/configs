@@ -41,5 +41,5 @@ set recolor-darkcolor           "#93a1a1" # base1
 # set recolor-keephue             true      # keep original color
 
 set recolor true
-
+set selection-clipboard clipboard
 set font "JetBrainsMono Nerd Font 10"

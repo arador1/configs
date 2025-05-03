@@ -6,16 +6,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Created by newuser for 5.9
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+#SUGGESTIONS AND HIGHLIGHTING
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#####
-export EDITOR='nvim'
-export IMAGE_VIEWER='imv'
-
-#alias
+#ALIAS
 alias ls='exa --icons --color=always --group-directories-first'
+
+#PATH
+export PATH="/home/arador/.cargo/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

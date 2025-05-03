@@ -28,19 +28,16 @@ return {
 				"clangd",
 				"lua_ls",
 				"pyright",
-				"jdtls",
+				"rust_analyzer",
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier",
 				"stylua",
 				"isort",
 				"black",
 				"clang-format",
-				"google-java-format",
-				"shfmt",
 			},
 		})
 	end,

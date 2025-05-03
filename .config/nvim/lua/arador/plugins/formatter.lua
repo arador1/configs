@@ -6,20 +6,11 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				css = { "prettier" },
-				html = { "prettier" },
-				json = { "prettier" },
-				jsonc = { "prettier" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
-				java = { "google-java-format" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
-				bash = { "shfmt" },
+				python = { "isort", "black" },
+				rust = { "rustfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
