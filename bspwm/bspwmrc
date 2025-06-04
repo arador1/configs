@@ -1,0 +1,18 @@
+#!/bin/sh
+
+sxhkd &                  # Keybind daemon
+~/.config/bspwm/bar.sh &
+picom &
+xsetroot -cursor_name left_ptr &  # Cursor fix
+kitty &              # Start terminal (or use xterm)
+
+# Optional (if installed)
+#picom --experimental-backends &   # Compositor
+#nitrogen --restore &              # Wallpaper manager
+
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus false
+bspc config pointer_follows_monitor false
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+

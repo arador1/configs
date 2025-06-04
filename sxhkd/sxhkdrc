@@ -1,0 +1,35 @@
+# launch terminal
+super + Return
+  kitty
+
+# kill window
+super + q
+  bspc node -c
+
+# rofi 
+super + a
+  rofi -show drun
+
+# switch to desktops 1-9
+super + 1
+    bspc desktop -f ^1
+super + 2
+    bspc desktop -f ^2
+super + 3
+    bspc desktop -f ^3
+super + 4
+    bspc desktop -f ^4
+super + 5
+    bspc desktop -f ^5
+super + 6
+    bspc desktop -f ^6
+super + 7
+    bspc desktop -f ^7
+super + 8
+    bspc desktop -f ^8
+super + 9
+    bspc desktop -f ^9
+# move focus
+super + {h,j,k,l}
+  bspc node -f {west,south,north,east}
+

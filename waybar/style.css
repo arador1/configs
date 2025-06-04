@@ -1,7 +1,10 @@
 * {
+  border: none;
+  border-radius: 0px;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
   font-size: 15px;
+  min-height: 10px;
 }
 
 window#waybar {
@@ -11,35 +14,37 @@ window#waybar {
 #workspaces {
   padding-left: 0px;
   padding-right: 0px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 #workspaces button {
-  padding-left: 4px;
-  padding-right: 4px;
-  color: #81a1c1;
+	box-shadow: none;
+	text-shadow: none;
+  padding: 0px;
+  border-radius: 10px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 0px;
+  color: #81a1c1 
 }
 
 #workspaces button.active {
-  padding-left: 4px;
-  padding-right: 4px;
   background-color: #4c566a;
-  border-radius: 4px;
-  color: #81a1c1;
 }
 
 #workspaces button:hover {
-  background-color: #4c566a;
-  border-radius: 4px;
+  background: #4c566a;
 }
 #workspaces button.urgent {
   background-color: #b53737;
-  border-radius: 4px;
 }
 
 #backlight {
   color: #d08770;
-  font-size: 16px;
   margin: 1px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
@@ -47,7 +52,6 @@ window#waybar {
 }
 #battery {
   color: #8aadf4;
-  font-size: 16px;
   opacity: 1;
   margin: 0px 0px 0px 0px;
   padding-left: 10px;
@@ -57,7 +61,6 @@ window#waybar {
 
 #clock {
   color: #81a1c1;
-  font-size: 16px;
   opacity: 1;
   margin: 0px 0px 0px 0px;
   padding-left: 10px;
@@ -65,7 +68,6 @@ window#waybar {
 }
 #pulseaudio {
   color: #ea999c;
-  font-size: 16px;
   margin: 0px 0px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
@@ -73,14 +75,12 @@ window#waybar {
 }
 #cpu {
   color: #ea76cb;
-  font-size: 16px;
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 10px;
 }
 #network {
   color: #88c0d0;
-  font-size: 16px;
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
@@ -93,7 +93,7 @@ window#waybar {
 #tray {
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 #clock,
 #cpu,
@@ -105,7 +105,7 @@ window#waybar {
 #tray,
 #workspaces {
   background-color: #2e3440;
-  border-radius: 4px;
+  border-radius: 10px;
   border-width: 2px;
   border-color: #3b4252;
   border-style: solid;
