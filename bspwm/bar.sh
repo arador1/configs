@@ -1,29 +1,53 @@
-#!/bin/bash
+# i3status configuration file.
+# see "man i3status" for documentation.
 
-get_battery() {
-    # This works for most laptops using standard battery path
-    bat=/sys/class/power_supply/BAT1
-    if [ -d "$bat" ]; then
-        capacity=$(cat $bat/capacity)
-        status=$(cat $bat/status)
-        echo "$capacity% ($status)"
-    else
-        echo "NoBattery"
-    fi
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = false
+        interval = 5
 }
 
-while true; do
-    # Time
-    time=$(date "+%H:%M")
+order += "ipv6"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+#order += "disk /"
+#order += "load"
+#order += "memory"
+order += "tztime local"
 
-    # Battery
-    battery=$(get_battery)
+wireless _first_ {
+        format_up = "󰤨 : (%quality at %essid) %ip"
+        format_down = "󰤯 : down"
+}
 
-    # Workspaces
-    ws=$(bspc wm -d | jq -r '.monitors[0].desktops[] | if .focused then "[\(.name)]" else "\(.name)" end' | xargs)
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
 
-    # Final bar layout
-    echo "%{l}$ws %{r}$battery  |  $time"
-    sleep 1
-done | lemonbar -g x24 -p -B '#1e1e2e' -F '#cdd6f4' -f "monospace-9"
+battery all {
+        format = " %status %percentage"
+}
 
+disk "/" {
+        format = "%avail"
+}
+
+load {
+        format = "%1min"
+}
+
+memory {
+        format = "%used | %available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+tztime local {
+        format = " %Y-%m-%d  %I:%M:%S %p"
+}
